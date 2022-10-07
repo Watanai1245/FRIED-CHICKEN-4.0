@@ -1,0 +1,60 @@
+@import "./Navbar.module.scss";
+
+.container {
+  height: calc(100vh - 100px);
+  // background-color: white;
+  background-image: -webkit-linear-gradient(
+    45deg,
+    white 0%,
+    white 35%,
+    $feature-color 35%,
+    $feature-color 35%
+  );
+  // background-image: linear-gradient( 45deg, white 0%, white 35%, $feature-color 35%, $feature-color 35%);
+  background-image: -webkit-linear-gradient(
+    45deg,
+    #ff9100 0%,
+    #ff9100 35%,
+    $main-color 35%,
+    $main-color 35%
+  );
+  background-image: linear-gradient(
+    45deg,
+    #ff9100 0%,
+    #ff9100 35%,
+    $main-color 35%,
+    $main-color 35%
+  );
+  position: relative;
+  z-index: 10;
+  overflow-x: hidden;
+
+  .arrowContainer {
+    position: absolute;
+    width: 10%;
+    height: 20%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    cursor: pointer;
+    z-index: 2;
+  }
+  .wrapper {
+    width: 300vw;
+    height: 100%;
+    display: flex;
+    transition: all 1.5s ease-in-out;
+
+    .imgContainer {
+      width: 100vw;
+      height: 100%;
+      position: relative;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    height: 50vh;
+  }
+}
